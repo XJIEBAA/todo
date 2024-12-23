@@ -15,8 +15,14 @@ export const todosSlice = createAppSlice({
   name: "todos",
   initialState,
   reducers: (create) => ({
-    update: create.reducer((state, action: PayloadAction<number>) => {
-      console.log(action.payload)
+    update: create.reducer((state, action) => {
+      state.todos = [...action.payload.todos, {
+        text: action.payload.data,
+        time: new Date().toDateString()
+      }]
+    }),
+    remove: create.reducer((state, action) => {
+      state.todos = action.payload.todos.filter(item => item.text !== action.payload.item.text)
     })
   }),
   selectors: {
@@ -25,7 +31,6 @@ export const todosSlice = createAppSlice({
   },
 });
 
-export const { update } =
-todosSlice.actions;
+export const { update, remove } = todosSlice.actions;
 
 export const { selectCount, selectTodos } = todosSlice.selectors;
