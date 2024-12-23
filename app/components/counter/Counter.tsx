@@ -3,14 +3,9 @@
 import { useState } from "react";
 
 import {
-  decrement,
-  increment,
-  incrementAsync,
-  incrementByAmount,
-  incrementIfOdd,
   selectCount,
   selectStatus,
-} from "@/lib/features/counter/counterSlice";
+} from "@/lib/features/counter/todosSlice";
 
 import { useAppDispatch, useAppSelector } from "@/lib/hooks";
 import styles from "./Counter.module.css";
@@ -29,7 +24,7 @@ export const Counter = () => {
         <button
           className={styles.button}
           aria-label="Decrement value"
-          onClick={() => dispatch(decrement())}
+          // onClick={() => dispatch(decrement())}
         >
           -
         </button>
@@ -39,7 +34,7 @@ export const Counter = () => {
         <button
           className={styles.button}
           aria-label="Increment value"
-          onClick={() => dispatch(increment())}
+          // onClick={() => dispatch(increment())}
         >
           +
         </button>
@@ -56,21 +51,21 @@ export const Counter = () => {
         />
         <button
           className={styles.button}
-          onClick={() => dispatch(incrementByAmount(incrementValue))}
+          // onClick={() => dispatch(incrementByAmount(incrementValue))}
         >
           Add Amount
         </button>
         <button
           className={styles.asyncButton}
-          disabled={status !== "idle"}
-          onClick={() => dispatch(incrementAsync(incrementValue))}
+          // disabled={status !== "idle"}
+          // onClick={() => dispatch(incrementAsync(incrementValue))}
         >
           Add Async
         </button>
         <button
           className={styles.button}
           onClick={() => {
-            dispatch(incrementIfOdd(incrementValue));
+            // dispatch(incrementIfOdd(incrementValue));
           }}
         >
           Add If Odd
