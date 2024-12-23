@@ -18,6 +18,46 @@ a {
   box-sizing: border-box;
 }
 
+.round {
+  margin-top: 5px;
+  width: 20px;
+  height: 20px;
+  background-color: #dfdfdf;
+  border-radius: 10em;
+}
+
+.containerTodo {
+  cursor: unset;
+  border-radius: 5px;
+  padding: 10px 10px;
+  margin-bottom: 5px;
+  /* background-color: #fafafa; */
+}
+
+.containerTodo:hover {
+  background-color: #fafafa;
+}
+
+.containerText .date {
+  font-size: 12px;
+  color: gray;
+  font-weight: 200;
+}
+
+.containerTodo {
+  display: grid;
+  grid-template-columns: 20px auto;
+  grid-column-gap: 10px;
+}
+
+.round:hover {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  background-color: #d2d2d2;
+  border-radius: 10em;
+}
+
 .logo img {
   position: absolute;
   top: -10px;
